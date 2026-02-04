@@ -156,8 +156,20 @@ cron.schedule("* * * * *", async () => {
 
 
 /* =========================
-   5️⃣ SERVER
+   5️⃣ SERVER bunu render uyumlu olmadığı sabit olduğu için kaldırdık
 ========================= */
 /*app.listen(3000, () => {
   console.log("API çalışıyor: http://localhost:3000");
 }); */
+
+
+/* =========================
+   SERVER
+========================= */
+
+const PORT = process.env.PORT || 3000;
+
+app.listen(PORT, () => {
+  console.log(`API çalışıyor. Port: ${PORT}`);
+});
+
